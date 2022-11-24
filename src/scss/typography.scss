@@ -1,0 +1,41 @@
+@import "./mixins";
+@import "./functions";
+@import "./variables";
+
+h1,
+h2,
+h3 {
+	font-family: $raleway;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: rem(24);
+	line-height: rem(36);
+}
+
+h2,
+h3 {
+	font-size: rem(18);
+	line-height: rem(24);
+}
+
+@include md {
+	h1,
+	h2 {
+		font-size: rem(40);
+	}
+
+	h1 {
+		line-height: rem(60);
+	}
+
+	h2 {
+		line-height: rem(50);
+	}
+
+	h3 {
+		font-size: rem(32);
+		line-height: rem(48);
+	}
+}

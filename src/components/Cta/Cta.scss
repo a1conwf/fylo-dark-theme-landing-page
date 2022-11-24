@@ -1,0 +1,132 @@
+@import "../../scss/functions";
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+//cta
+.cta {
+	position: relative;
+	top: 160px;
+	padding: 40px 28px;
+	text-align: center;
+	background-color: #1b2330;
+	box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.254274);
+	border-radius: rem(9);
+	z-index: 9999;
+
+	//title
+	&__title {
+		margin-bottom: 16px;
+	}
+
+	//text
+	&__text {
+		max-width: 670px;
+		margin: 0 auto 32px auto;
+	}
+
+	//form
+	.form {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		max-width: 280px;
+		margin: 0 auto;
+
+		//form input
+		&__input {
+			position: relative;
+
+			input {
+				width: 100%;
+				min-height: rem(48);
+				padding-left: 30px;
+				font-size: rem(10);
+				line-height: rem(14);
+				color: #c0c0c0;
+				border: none;
+				outline: none;
+				box-shadow: 1px 1px 3px rgba(7, 4, 59, 0.157043);
+				border-radius: rem(24);
+
+				&:focus {
+					color: #07043b;
+				}
+			}
+
+			.error__text {
+				position: absolute;
+				display: none;
+				left: 30px;
+				padding-top: 5px;
+				font-size: rem(10);
+				font-weight: 700;
+				line-height: rem(14);
+				color: $red;
+			}
+		}
+
+		//form btn
+		.btn {
+			max-width: rem(280);
+			font-size: rem(14);
+			line-height: rem(16);
+		}
+
+		//form error
+		&.error {
+			gap: 40px;
+
+			.error__text {
+				display: block;
+			}
+		}
+	}
+}
+
+@include lg {
+	//cta
+	.cta {
+		max-width: 863px;
+		margin: 0 auto;
+		padding: 42px 78px;
+		top: 120px;
+
+		//text
+		&__text {
+			margin-bottom: 38px;
+		}
+
+		//form
+		.form {
+			flex-direction: row;
+			gap: 30px;
+			max-width: 720px;
+
+			//form input
+			&__input {
+				height: 48px;
+
+				input {
+					min-width: 480px;
+					padding-left: 38px;
+					font-size: rem(12);
+					line-height: rem(16);
+				}
+
+				.error__text {
+					left: 38px;
+				}
+			}
+
+			//form btn
+			.btn {
+				max-width: rem(200);
+				min-height: rem(48);
+			}
+
+			&.error {
+				gap: 30px;
+			}
+		}
+	}
+}

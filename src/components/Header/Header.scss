@@ -1,0 +1,125 @@
+@import "../../scss/layout";
+@import "../../scss/components";
+
+//header
+.header {
+	margin-bottom: 120px;
+
+	//nav
+	&__nav {
+		padding: 24px 0 48px;
+		@include flex(space-between, center);
+
+		//logo
+		&-logo {
+			width: 80px;
+			height: 24px;
+		}
+
+		//nav
+		.nav {
+			//nav list
+			&__list {
+				@include flex(flex-start, center);
+				gap: 24px;
+
+				//nav list item
+				&-item {
+					a {
+						color: $white;
+					}
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+
+	//hero
+	.hero {
+		text-align: center;
+
+		//img
+		&__img {
+			width: 304px;
+			height: 225px;
+			margin-bottom: 33px;
+		}
+
+		//hero content
+		&__content {
+			//title
+			&-title {
+				max-width: 740px;
+				margin-bottom: 15px;
+			}
+
+			//text
+			&-text {
+				max-width: 590px;
+				margin: 0 auto 32px auto;
+			}
+		}
+	}
+}
+
+@include md {
+	//header
+	.header {
+		margin-bottom: 158px;
+
+		//header nav
+		&__nav {
+			padding: 73px 0 75px;
+
+			//logo
+			&-logo {
+				width: 176px;
+				height: 52px;
+			}
+
+			//nav
+			.nav {
+				//nav list
+				&__list {
+					gap: 57px;
+
+					//nav list item
+					&-item {
+						a {
+							color: $white;
+							font-size: rem(16);
+							line-height: rem(19);
+						}
+					}
+				}
+			}
+		}
+
+		//hero
+		.hero {
+			//img
+			&__img {
+				width: 720px;
+				height: 534px;
+				margin-bottom: 36px;
+			}
+
+			//hero content
+			&__content {
+				//title, text
+				&-title {
+					margin: 0 auto 32px auto;
+				}
+
+				//text
+				&-text {
+					font-size: rem(20);
+					line-height: rem(30);
+				}
+			}
+		}
+	}
+}

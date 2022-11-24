@@ -1,0 +1,33 @@
+@import "../../scss/mixins";
+
+//testimonials
+.testimonials {
+	//testimonials inner
+	&__inner {
+		display: grid;
+		gap: 24px;
+	}
+}
+
+@include sm {
+	//testimonials
+	.testimonials {
+		//testimonials inner
+		&__inner {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
+
+@include lg {
+	//testimonials
+	.testimonials {
+		margin-bottom: 40px;
+
+		//testimonials inner
+		&__inner {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 40px;
+		}
+	}
+}

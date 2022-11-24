@@ -1,0 +1,50 @@
+@import "../../../scss/variables";
+@import "../../../scss/functions";
+@import "../../../scss/mixins";
+
+//feature
+.feature {
+	text-align: center;
+
+	//img
+	&__img {
+		width: 80px;
+		height: 80px;
+		margin-bottom: 24px;
+	}
+
+	//title
+	&__title {
+		display: block;
+		font-family: $raleway;
+		font-size: rem(18);
+		line-height: rem(24);
+		font-weight: 700;
+		margin-bottom: 8px;
+	}
+
+	//text
+	&__text {
+		max-width: 360px;
+		margin: 0 auto;
+	}
+}
+
+@include md {
+	//feature
+	.feature {
+		//img
+		&__img {
+			width: 104px;
+			height: 104px;
+			margin-bottom: 16px;
+		}
+
+		//title
+		&__title {
+			font-size: rem(20);
+			line-height: rem(23);
+			margin-bottom: 9px;
+		}
+	}
+}

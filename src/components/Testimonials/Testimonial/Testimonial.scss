@@ -1,0 +1,86 @@
+@import "../../../scss/functions";
+@import "../../../scss/mixins";
+
+//testimonial
+.testimonial {
+	position: relative;
+	padding: 24px 20px 21px;
+	background-color: #202a3c;
+	box-shadow: 0px 0px 8px 4px rgba(56, 56, 56, 0.0458843);
+	border-radius: rem(4);
+
+	//testimonial bg
+	&__bg {
+		position: absolute;
+		top: -35px;
+		left: 10px;
+		z-index: -1;
+	}
+
+	//text
+	&__text {
+		margin-bottom: 17px;
+	}
+
+	//person
+	&__person {
+		@include flex(flex-start, center);
+		gap: 8px;
+
+		//person img
+		&-img {
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+		}
+
+		//person info
+		&-info {
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+
+			span {
+				display: block;
+			}
+
+			//name
+			&-name {
+				font-weight: 700;
+				font-size: rem(10);
+				line-height: rem(12);
+				letter-spacing: 0.5px;
+			}
+
+			//pos
+			&-pos {
+				font-size: rem(7);
+				line-height: rem(10);
+				letter-spacing: 0.5px;
+			}
+		}
+	}
+}
+
+@include md {
+	//testimonial
+	.testimonial {
+		padding: 40px 26px 26px;
+
+		//text
+		&__text {
+			margin-bottom: 24px;
+		}
+
+		//person
+		&__person {
+			//person info
+			&-info {
+				//pos
+				&-pos {
+					font-size: rem(8);
+				}
+			}
+		}
+	}
+}

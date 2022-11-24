@@ -1,0 +1,32 @@
+@import "./variables";
+@import "./functions";
+
+.btn {
+	display: inline-block;
+	max-width: rem(240);
+	margin: 0 auto;
+	min-height: rem(48);
+	width: 100%;
+	@include flex(center, center);
+	font-family: $raleway;
+	font-weight: 700;
+	line-height: rem(16);
+	color: $white;
+	background: $cyanGradient;
+	border-radius: rem(24);
+	box-shadow: 2px 3px 6px 0px #00000029;
+
+	&:hover {
+		background: linear-gradient(#8adae3 100%, #8adae3 100%);
+	}
+}
+
+@include md {
+	.btn {
+		max-width: rem(280);
+		min-height: rem(56);
+		font-size: rem(16);
+		line-height: rem(19);
+		border-radius: rem(28);
+	}
+}

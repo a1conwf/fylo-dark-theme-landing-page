@@ -1,0 +1,34 @@
+@import "../../scss/mixins";
+
+//features
+.features {
+	margin-bottom: 160px;
+
+	//features inner
+	&__inner {
+		display: grid;
+		gap: 80px;
+	}
+}
+
+@include sm {
+	//features inner
+	.features__inner {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@include md {
+	//features
+	.features {
+		margin-bottom: 140px;
+	}
+}
+
+@include lg {
+	//features inner
+	.features__inner {
+		column-gap: 150px;
+		row-gap: 80px;
+	}
+}
