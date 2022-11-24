@@ -5,7 +5,7 @@ import "./Testimonial.scss";
 
 const Testimonial = ({text, bgImg, img, name, pos}) => {
 	return (
-		<article className="testimonial">
+		<div className="testimonial">
 			{bgImg && <img src={bgImg} className="testimonial__bg" alt="quotes-img" />}
 			<p className="testimonial__text">{text}</p>
 			<div className="testimonial__person">
@@ -15,7 +15,7 @@ const Testimonial = ({text, bgImg, img, name, pos}) => {
 					<span className="testimonial__person-info-pos">{pos}</span>
 				</div>
 			</div>
-		</article>
+		</div>
 	);
 };
 
